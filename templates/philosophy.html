@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ philosophy_name }} Education</title>
+</head>
+<body>
+<h1>{{ philosophy_name }} Education</h1>
+<ul>
+{% for school in schools %}
+<li><a href="{{ url_for('schools', school_id=school['id']) }}">{{ school['name'] }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
+---
